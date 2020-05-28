@@ -11,6 +11,7 @@ $color-primary: rgb(12, 104, 241);
 $color-primary-light: rgb(27, 126, 255);
 $color-primary-dark: rgb(7, 48, 228);
 $color-grey-dark:#777;
+$color-black: #000;
 
 * {
     margin: 0;
@@ -108,12 +109,12 @@ $color-grey-dark:#777;
   
   .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
   }
   
   .btn:active {
     transform: translateY(0);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
   }
   
   .btn-white {
