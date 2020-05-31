@@ -32,6 +32,15 @@
     }
   }
 
+  &-blue {
+    background-color: $color-primary-light;
+    color: $color-grey-dark;
+    &::after {
+      background-color:$color-primary-light;
+    }
+  }
+
+
   &::after {
     content: "";
     display: inline-block;
