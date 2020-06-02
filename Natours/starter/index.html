@@ -17,6 +17,21 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <!-- navigation -->
+    <div class="navigation">
+      <input type="checkbox" class="navigation_checkbox" id="nav-toggler">
+      <label for="nav-toggler" class="navigation_button"><span class="navigation_icon"></span></label>
+      <div class="navigation_background"></div>
+      <nav class="navigation_nav">
+        <ul class="navigation_list">
+          <li class="navigation_item"><a href="#" class="navigation_link">About Vein</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Checkout Vein</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Visit Vein</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Hug Vein</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Cuddle Vein</a></li>
+        </ul>
+      </nav>
+    </div>
     <!-- header image -->
     <header class="header">
       <div class="logo-box">
@@ -121,7 +136,7 @@
       </section>
 
       <!-- flip card section -->
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <!-- heading -->
         <div class="u-center-text u-mb-8">
           <h2 class="heading-secondary">
@@ -155,7 +170,7 @@
                     <p class="card__price-only">Support Idol</p>
                     <p class="card__price-value">$666</p>
                   </div>
-                  <a href="#" class="btn btn--white">Get Veined!</a>
+                  <a href="#popup" class="btn btn--white">Get Veined!</a>
                 </div>
               </div>
             </div>
@@ -187,7 +202,7 @@
                     <p class="card__price-only">Support Idol!</p>
                     <p class="card__price-value">$888</p>
                   </div>
-                  <a href="#" class="btn btn--white">Super Veined!</a>
+                  <a href="#popup" class="btn btn--white">Super Veined!</a>
                 </div>
               </div>
             </div>
@@ -217,7 +232,7 @@
                     <p class="card__price-only">Support Idol!</p>
                     <p class="card__price-value">$999</p>
                   </div>
-                  <a href="#" class="btn btn--white">Ultimate Veined!</a>
+                  <a href="#popup" class="btn btn--white">Ultimate Veined!</a>
                 </div>
               </div>
             </div>
@@ -400,6 +415,24 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup_content">
+        <div class="popup_left">
+          <img src="./img/vein_come.jfif" alt="" class="popup_img">
+          <img src="./img/vein_lolipop.jfif" alt="" class="popup_img">
+        </div>
+        <div class="popup_right">
+          <a href="#section-tours" class="popup_close">&times;</a>
+          <h2 class="heading-secondary">Cool Idol!</h2>
+          <h3 class="heading-tertiary">Important: Love him genuely!</h3>
+          <p class="popup_text">
+            Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein! Love Vein!
+          </p>
+          <a href="#" class="btn btn-blue">Join</a>
+        </div>
+      </div>
+    </div>
     <!-- <section class="grid-test">
       <div class="row">
         <div class="col-1-of-2">Col 1 of 2</div>

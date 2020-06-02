@@ -1,0 +1,80 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &_close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &:target &_content {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &_content {
+    @include absCenter;
+    overflow: hidden;
+    border-radius: 3px;
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color: $color-black, $alpha: 0.2);
+    display: table;
+    transition: all .4s;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  &_left {
+    width: 33.33%;
+    display: table-cell;
+  }
+
+  &_right {
+    width: 66.667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem 2rem;
+  }
+
+  &_img {
+    display: block;
+    width: 100%;
+  }
+
+  &_text {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+
+    -moz-column-count: 2;
+    column-count: 2;
+    column-rule: 1px solid $color-primary-light;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
