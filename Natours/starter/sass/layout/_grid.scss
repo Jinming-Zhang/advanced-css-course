@@ -4,13 +4,28 @@
     max-width: $grid-row-max-width;
     margin: 0 auto;
     margin-bottom: $grid-gutter-vertical;
+    @include respond(tab-port) {
+      margin-bottom: $grid-gutter-vertical-sm;
+    }
   }
 
+  @include respond(tab-port) {
+    max-width: 85%;
+    padding: 0 3rem;
+  }
   [class^="col-"] {
     float: left;
     padding: 1rem;
     &:not(:last-child) {
       margin-right: $grid-gutter-horizontal;
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $grid-gutter-vertical-sm;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {

@@ -2,17 +2,27 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color: $color-black, $alpha: 0.1);
-  background-color: rgba($color-white, .6);
+  background-color: rgba($color-white, 0.6);
   padding: 2rem;
   padding-left: 9rem;
   font-size: 1rem;
+  @include respond(tab-port) {
+    width: 100%;
+    padding-left: 6rem;
+  }
 
   transform: skewX(-12deg);
-
+  @include respond(phone) {
+    transform: skewX(0);
+  }
   &_shape {
     position: relative;
-    width: 15rem;
-    height: 15rem;
+    width: 13rem;
+    height: 13rem;
+    @include respond(tab-port) {
+      width: 8rem;
+      height: 8rem;
+    }
     float: left;
     z-index: 10;
     shape-outside: circle(50% at 50% 50%);
@@ -22,15 +32,28 @@
     -webkit-clip-path: circle(50% at 50% 50%);
 
     transform: translateX(-3rem) skewX(12deg);
+    @include respond(tab-port) {
+      transform: translateX(-3rem) skewX(12deg);
+    }
+    @include respond(phone) {
+      transform: translateX(-2rem) skewX(0);
+    }
   }
 
   &_img {
     height: 100%;
     transform: translateX(-5rem) scale(1.1);
-    transition: transform .2s;
+    @include respond(tab-port) {
+      transform: translateX(-3rem) scale(1.1);
+    }
+    transition: transform 0.2s;
   }
+
   &_text {
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
   &_caption {
     position: absolute;
@@ -48,7 +71,7 @@
     opacity: 1;
     transform: translate(-50%, -50%);
   }
-  &_shape:hover &_img{
+  &_shape:hover &_img {
     transform: translateX(-5rem) scale(1);
     // filter: blur(2px) brightness(90%);
   }
